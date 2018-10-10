@@ -7,7 +7,8 @@
 }
 
 body {
-    font-family: arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
 }
 
 a {
@@ -22,15 +23,24 @@ button {
 
 ul {
     list-style: none;
-    margin: 0;
+    margin: auto;
     padding: 0;
-    display: inline;
+    display: inline-block;
     overflow: hidden;
 }
 
 li a {
     display: inline-block;
     text-align: center;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+li {
+    float: left;
+    vertical-align: baseline;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 /* Nav Bar */
@@ -38,32 +48,43 @@ li a {
 nav {
     position: fixed;
     top: 20px;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
 }
 
 .nav-left {
-    float: left;
+    margin-left: 10px;
 }
 
 .nav-right {
-    float: right;
+    margin-right: 10px;
 }
 
 .google-apps-icon {
     height: auto;
-    width: 15px;
+    width: 20px;
 }
 
 .sign-in {
     background-color: #4285f4;
     color: white;
     border: #4285f4 solid 1px;
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 /* Main Body */
 
 .main {
-    position: relative;
-    top: 250px;
+    position: absolute;
+    top: 200px;
+    width: 100%;
 }
 
 #logo {
@@ -78,17 +99,33 @@ nav {
 #searchbar {
     border: #f0f0f0 solid 1px;
     border-radius: 2px;
+    height: 45px;
+    width: 450px;
+    margin-top: 25px;
+    box-shadow: 0 2px 1px 0 lightgray;
+    font-weight: 100;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#searchbar:focus, button:focus {
+    outline: none;
 }
 
 .search-button {
     background-color: #f0f0f0;
-    color: #6f6f6f;
+    color: #757575;
     border:#f0f0f0 solid 1px;
+    padding: 10px 15px;
+    margin: 30px 3px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: arial, sans-serif;
 }
 
 .search-button:hover {
     color: black;
-    border: black solid 1px;
+    border: lightgray solid 1px;
 }
 
 /* Footer */
@@ -96,7 +133,27 @@ nav {
 footer {
     background-color: #f0f0f0;
     position: fixed;
-    bottom: 20px;
-    padding-bottom: 20px;
+    bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-bottom: 0;
+    width: 100%;
+}
+
+footer li a {
+    color: #666;
+}
+
+.div-footer-left {
+    margin-left: 20px;
+}
+
+.div-footer-right {
+    margin-right: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
 }
